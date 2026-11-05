@@ -9,6 +9,58 @@
         <controller>analytics</controller>
         <action>index</action>
     </analytics>
+    <antelope>
+        <label>Antelopes</label>
+        <title>Antelopes</title>
+        <icon>fa-paw</icon>
+        <bundle>antelope-gui</bundle>
+        <controller>index</controller>
+        <action>index</action>
+        <pages>
+            <antelope-list>
+                <label>Antelopes</label>
+                <title>Antelopes</title>
+                <bundle>antelope-gui</bundle>
+                <controller>index</controller>
+                <action>index</action>
+                <pages>
+                    <antelope-create>
+                        <label>Create Antelope</label>
+                        <title>Create Antelope</title>
+                        <bundle>antelope-gui</bundle>
+                        <controller>index</controller>
+                        <action>create</action>
+                        <visible>0</visible>
+                    </antelope-create>
+                </pages>
+            </antelope-list>
+            <antelope-location-list>
+                <label>Antelope Locations</label>
+                <title>Antelope Locations</title>
+                <bundle>antelope-location-gui</bundle>
+                <controller>index</controller>
+                <action>index</action>
+                <pages>
+                    <antelope-location-create>
+                        <label>Create Antelope Location</label>
+                        <title>Create Antelope Location</title>
+                        <bundle>antelope-location-gui</bundle>
+                        <controller>index</controller>
+                        <action>create</action>
+                        <visible>0</visible>
+                    </antelope-location-create>
+                    <antelope-location-edit>
+                        <label>Edit Antelope Location</label>
+                        <title>Edit Antelope Location</title>
+                        <bundle>antelope-location-gui</bundle>
+                        <controller>index</controller>
+                        <action>edit</action>
+                        <visible>0</visible>
+                    </antelope-location-edit>
+                </pages>
+            </antelope-location-list>
+        </pages>
+    </antelope>
     <dashboard>
         <label>Dashboard</label>
         <title>Dashboard</title>

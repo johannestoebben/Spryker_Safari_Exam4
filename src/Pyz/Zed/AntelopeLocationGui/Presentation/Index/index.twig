@@ -1,0 +1,15 @@
+{% extends '@Gui/Layout/layout.twig' %}
+
+{% block section_title 'Antelope Locations' | trans %}
+
+{% block action %}
+    {{ createActionButton('/antelope-location-gui/index/create', 'Create Antelope Location' | trans) }}
+{% endblock %}
+
+{% block content %}
+    {% embed '@Gui/Partials/widget.twig' with { widget_title: 'List of Antelope Locations' | trans } %}
+        {% block widget_content %}
+            {{ antelopeLocationTable | raw }}
+        {% endblock %}
+    {% endembed %}
+{% endblock %}

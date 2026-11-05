@@ -1,0 +1,15 @@
+{% extends '@Gui/Layout/layout.twig' %}
+
+{% block section_title ('Edit Antelope Location' | trans) ~ ': ' ~ antelopeLocation.locationName %}
+
+{% block action %}
+    {{ backActionButton('/antelope-location-gui/index', 'Back to Antelope Locations' | trans) }}
+{% endblock %}
+
+{% block content %}
+    {% embed '@Gui/Partials/widget.twig' with { widget_title: 'Antelope Location' | trans } %}
+        {% block widget_content %}
+            {% include '@AntelopeLocationGui/_partials/form.twig' %}
+        {% endblock %}
+    {% endembed %}
+{% endblock %}

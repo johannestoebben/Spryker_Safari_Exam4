@@ -1,0 +1,20 @@
+{% extends '@Gui/Layout/layout.twig' %}
+
+{% block section_title 'Create Antelope' | trans %}
+
+{% block action %}
+    {{ backActionButton('/antelope-gui/index', 'Back to Antelopes' | trans) }}
+{% endblock %}
+
+{% block content %}
+    {% embed '@Gui/Partials/widget.twig' with { widget_title: 'Antelope' | trans } %}
+        {% block widget_content %}
+            {{ form_start(form) }}
+                {{ form_row(form.name) }}
+                {{ form_row(form.color) }}
+                {{ form_row(form.idLocation) }}
+                <input type="submit" class="btn btn-primary safe-submit" value="{{ 'Save' | trans }}" />
+            {{ form_end(form) }}
+        {% endblock %}
+    {% endembed %}
+{% endblock %}
